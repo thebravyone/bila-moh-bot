@@ -3,7 +3,7 @@
  * @Date:   29-Apr-2017 11:58:13
  * @Filename: server.js
  * @Last modified by:   Guilherme Serradilha
- * @Last modified time: 29-Apr-2017 22:51:44
+ * @Last modified time: 30-Apr-2017 17:13:11
  * @License: MIT
  */
 
@@ -33,16 +33,20 @@ bot.on('disconnect', function (err, errCode) {
 
 // Gerencia as respostas do bot baseado nos comandos recebidos no chat
 bot.on('message', function (user, userID, channelID, message, event) {
-  var voiceChannelID = getVoiceChannelID(userID)
+  var voiceChannelID = getVoiceChannelID(channelID, userID)
   if (userID === bot.id) return
   // Lida com as mensagens definidas no JSON
   for (var i = 0; i < responses.length; i++) {
-    if (message === responses[i].command) {
-      if (responses[i].audio !== '') {
-        playAudio(voiceChannelID, responses[i].audio)
-      }
-      if (responses[i].message !== '') {
-        bot.sendMessage({ to: channelID, message: responses[i].message })
+    if (responses[i].command === message) {
+      if (voiceChannelID !== undefined) {
+        if (responses[i].audio !== '') {
+          playAudio(voiceChannelID, responses[i].audio)
+        }
+        if (responses[i].message !== '') {
+          bot.sendMessage({ to: channelID, message: responses[i].message })
+        }
+      } else {
+        bot.sendMessage({ to: channelID, message: '<@' + userID + '> entra num channel de voz, animal :sweat_smile: ' })
       }
     }
   }
@@ -69,12 +73,8 @@ function loadResponseJSON () {
 
 // Traz o Voice Channel do usuario
 // Retorna undefined se o usuario nao estiver em nenhum voice channel
-function getVoiceChannelID (userID) {
-  for (var server in bot.servers) {
-    if (bot.servers[server].members[userID]) {
-      return bot.servers[server].members[userID].voice_channel_id
-    }
-  }
+function getVoiceChannelID (channelID, userID) {
+  return bot.servers[bot.channels[channelID].guild_id].members[userID].voice_channel_id
 }
 
 // Prepara o voice channel para receber o audio
