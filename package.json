@@ -1,0 +1,27 @@
+{
+  "name": "bila-moh-bot",
+  "version": "1.0.0",
+  "description": "Um bot para você summonar o Bila em seu chat do Discord",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebravyone/bila-moh-bot.git"
+  },
+  "keywords": [
+    "bot",
+    "discord",
+    "bila"
+  ],
+  "author": "thebravyone",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thebravyone/bila-moh-bot/issues"
+  },
+  "homepage": "https://github.com/thebravyone/bila-moh-bot#readme",
+  "dependencies": {
+    "discord.io": "^2.5.1"
+  }
+}
