@@ -3,7 +3,7 @@
  * @Date:   29-Apr-2017 11:58:13
  * @Filename: server.js
  * @Last modified by:   Guilherme Serradilha
- * @Last modified time: 30-Apr-2017 17:13:11
+ * @Last modified time: 30-Apr-2017 18:19:06
  * @License: MIT
  */
 
@@ -14,7 +14,7 @@ var responses = []
 var helpMessage = ''
 
 var bot = new Discord.Client({
-  token: '',
+  token: 'MzA3NzA4NzUyNjE2ODgyMTc4.C-Y7fA.9F1h95Nf-bKoJx4Q0mTJo2jXSoQ',
   autorun: true
 })
 
