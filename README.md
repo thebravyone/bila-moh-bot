@@ -1,6 +1,6 @@
 # BilaMohBot
 
-Este bot permite que você summonar o Bila em seu chat do Discord, garantindo altos papos com muito aprendizado e zuera.
+Este bot permite você summonar o Bila em seu chat do Discord, garantindo altos papos com muito aprendizado e zuera.
 
 ![Screenshot do BilaMohBot](./image/bila_screen-shot.jpg)
 
