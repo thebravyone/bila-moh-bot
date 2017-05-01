@@ -1,2 +1,3 @@
 FROM gcr.io/google-appengine/nodejs
-RUN sudo apt-get install ffmpeg
+RUN apt-get update
+RUN apt-get install ffmpeg
