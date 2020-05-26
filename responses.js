@@ -1,10 +1,4 @@
-[
-  {
-    "command": "!summon-bila",
-    "audio":   "bila_na_area.mp3",
-    "message": "To na área! :sunglasses: ",
-    "hint":    "Traz o BilaMohBot aqui para o channel"
-  },
+module.exports= [
   {
     "command": "!bambu",
     "audio":   "bambu_vai_gemer.mp3",
@@ -30,12 +24,6 @@
     "hint":    "Uns high-five do capiroto pra confirmar a brotheragem"
   },
   {
-    "command": "!falou-bila",
-    "audio":   "",
-    "message": "Falou! É só chamar que é nois :grimacing: :grimacing: :grimacing: ",
-    "hint":    "Manda o BilaMohBot sair do channel"
-  },
-  {
     "command": "!hue",
     "audio":   "haha.mp3",
     "message": ":joy: :joy: :joy: :joy: :joy: :joy: :joy: :joy: ",
@@ -50,7 +38,7 @@
   {
     "command": "!bb",
     "audio":   "matei.mp3",
-    "message": "Matei! :bomb: :bomb: :bomb: :bomb: HUEHEUHEUEHUEHEUHEUEH",
+    "message": "Matei! :skull_crossbones: :rofl: :rofl: :rofl: HUEHEUHEUEHUEHEUHEUEH",
     "hint":    "Demonstração de um giroleio kamikaze suicida do agreste"
   },
   {
@@ -125,4 +113,4 @@
     "message": "Cade o uali?? :crocodile::crocodile: Veeeeem uali! :gun: :gun: ",
     "hint":    "Special Bawoo of Bahia +9999% pierce E18"
   }
-]
+];
